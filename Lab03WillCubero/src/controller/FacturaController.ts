@@ -213,7 +213,7 @@ static getById = async (req: Request, resp: Response) => {
     } catch (error) {
       return resp
         .status(404)
-        .json({ mensaje: "¡ATENCION USUARIO! No se encontro la factura con ese id solic" });
+        .json({ mensaje: "¡ATENCION USUARIO! No se encontro la factura con ese id solicgi" });
     }
 
     return resp.status(200).json({ LaFacturaCab, ElFacturaDet });
