@@ -18,4 +18,6 @@ export class Factura {
 
   @OneToMany(()=>Detalle_factura,(detallefacturacion)=>detallefacturacion.factura)
   detallefacturacion: Detalle_factura[];
+  eliminada: boolean;
+
 }

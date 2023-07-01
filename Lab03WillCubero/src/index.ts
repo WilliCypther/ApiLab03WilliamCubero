@@ -13,6 +13,8 @@ AppDataSource.initialize().then(async () => {
     app.use(cors());
     app.use(helmet());
     app.use(express.json());
+   
+
 
     //rutas
     app.use('/', routes)

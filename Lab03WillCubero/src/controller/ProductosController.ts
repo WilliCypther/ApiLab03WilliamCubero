@@ -1,6 +1,9 @@
-import { Request, Response } from "express";
-import { AppDataSource } from "../data-source";
-import { Producto } from "../entity/Producto";
+import { Request, Response 
+} from "express";
+import { AppDataSource 
+} from "../data-source";
+import { Producto 
+} from "../entity/Producto";
 
 class ProductosController {
   // Método para obtener todos los productos
