@@ -237,7 +237,7 @@ class FacturaController {
       //Extraemos el id, en fomrato Int
       Numero = parseInt(req.params["numero"]);
       if (!Numero) {
-        return resp.status(404).json({ mensaje: "No se indica el ID" });
+        return resp.status(404).json({ mensaje: "¡ATENCION USUARIO! No se indica el id ingresado" });
       }
       //Hacemos la instancia del repositorio
       let LaFacturaCab, ElFacturaDet;
@@ -254,7 +254,7 @@ class FacturaController {
       } catch (error) {
         return resp
           .status(404)
-          .json({ mensaje: "No se encontro la factura con ese ID" });
+          .json({ mensaje: "¡ATENCION USUARIO! No se encontro la factura con ese id indicado" });
       }
 
       return resp.status(200).json({ LaFacturaCab, ElFacturaDet });
@@ -273,7 +273,7 @@ class FacturaController {
 
       // Verificar si se proporcionó un número válido
       if (!Numero) {
-        return resp.status(404).json({ mensaje: "No se indica el ID" });
+        return resp.status(404).json({ mensaje: "¡ATENCION USUARIO! No se encontro el id Solicitado" });
       }
 
       // Obtener el repositorio de la entidad "Cabecera_factura"
@@ -307,12 +307,12 @@ class FacturaController {
         await detalles.save(productoToUpdate);
 
         // Retornar una respuesta exitosa con un mensaje indicando que la factura ha sido actualizada
-        return resp.status(200).json({ mensaje: "Factura actualizada" });
+        return resp.status(200).json({ mensaje: "¡ATENCION USUARIO! La Factura fue actualizada Exitosamente" });
       } catch (error) {
         // Retornar una respuesta de error si no se encuentra la factura con el ID indicado
         return resp
           .status(404)
-          .json({ mensaje: "No se encontró factura con ese ID" });
+          .json({ mensaje: "¡ATENCION USUARIO! No se encontró factura con ese id " });
       }
     } catch (error) {
       // Retornar una respuesta de error si ocurre algún error durante la ejecución
