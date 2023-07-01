@@ -11,7 +11,7 @@ routes.delete("/:id", FacturaController.deleteAll);
 //routes.post('/factura', FacturaController.addAll);
 routes.post('', FacturaController.addAll);
 routes.get('/:Numero',FacturaController.getById);
-routes.put("/:Numero", FacturaController.update);
+routes.put("/:numero", FacturaController.update);
 
 // /:id
 //routes.delete("/Factura/:id", FacturaController.deleteAll);
