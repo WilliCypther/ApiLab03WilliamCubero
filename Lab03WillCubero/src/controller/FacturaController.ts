@@ -196,7 +196,7 @@ static getById = async (req: Request, resp: Response) => {
     //Extraemos el id, en fomrato Int
     Numero = parseInt(req.params["numero"]);
     if (!Numero) {
-      return resp.status(404).json({ mensaje: "No se indica el ID" });
+      return resp.status(404).json({ mensaje: "¡ATENCION USUARIO! No se indica el id Deseado" });
     }
     //Hacemos la instancia del repositorio
     let LaFacturaCab, ElFacturaDet;
@@ -213,7 +213,7 @@ static getById = async (req: Request, resp: Response) => {
     } catch (error) {
       return resp
         .status(404)
-        .json({ mensaje: "No se encontro la factura con ese ID" });
+        .json({ mensaje: "¡ATENCION USUARIO! No se encontro la factura con ese id solic" });
     }
 
     return resp.status(200).json({ LaFacturaCab, ElFacturaDet });
